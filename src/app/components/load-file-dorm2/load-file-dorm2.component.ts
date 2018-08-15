@@ -113,7 +113,7 @@ export class LoadFileDorm2Components implements OnInit {
                 value: value.water
             });
             models.push({
-                key: "ไฟฟ้า( "+   value.electricityCurrent  +' - ' + value.electricityPreviousMonth + ') * '+ value.costPerElectricity,
+                key: "ไฟฟ้า( "+ value.electricityCurrent  +' - ' + value.electricityPreviousMonth + ') * '+ value.costPerElectricity,
                 value: value.electricity
             });
             models.push({
