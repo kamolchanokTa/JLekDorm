@@ -109,11 +109,11 @@ export class LoadFileDorm2Components implements OnInit {
                 value: value.rentalCost
             });
             models.push({
-                key: "น้ำประปา",
+                key: "น้ำประปา" ,
                 value: value.water
             });
             models.push({
-                key: "ไฟฟ้า",
+                key: "ไฟฟ้า( "+   value.electricityCurrent  +' - ' + value.electricityPreviousMonth + ') * '+ value.costPerElectricity,
                 value: value.electricity
             });
             models.push({

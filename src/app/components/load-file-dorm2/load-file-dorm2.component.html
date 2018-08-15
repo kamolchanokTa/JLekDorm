@@ -39,7 +39,7 @@
                             </div>
                             <div id="body">
                                 <div *ngFor="let data of report.data">
-                                    <div  id="bodyContent" >
+                                        <div id="bodyContent" *ngIf="data.key != 'ห้องเลขที่';">
                                         <div id="left">{{data.key}}</div>
                                         <div id="value">{{data.value}}</div>
                                         <div id="right">บาท</div> 
