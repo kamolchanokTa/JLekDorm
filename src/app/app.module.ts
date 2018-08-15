@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouteModule } from './app.router';
 
 import { AppComponent } from './app.component';
-
-
+import { componentList, bootstrap } from './components.register';
 @NgModule({
   declarations: [
-    AppComponent
+    componentList
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouteModule,
   ],
-  providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  //providers: [serviceList],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

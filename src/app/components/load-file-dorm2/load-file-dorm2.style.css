@@ -1,0 +1,45 @@
+#secondline {
+    display: inline-flex;
+}
+h2 {
+    text-align: center;
+}
+#bodyContent{
+    display: inline-flex;
+    margin: 4% 4% 4% 4%;
+}
+#left{
+    left: 2%;
+    position: absolute;
+}
+#right{
+    left: 70%;
+    position: absolute;
+}
+#value{
+    left: 60%;
+    position: absolute;
+}
+#footerContent{
+    text-align: center;
+    margin: 5% 5% 5% 5%;
+}
+#body{
+    margin: 5% 5% 5% 5%;
+}
+#PS{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#allPage{
+    font-size: 18px;
+}
+#border{
+    padding-left: 4%;
+}
+#top {
+    padding-top: 10%
+}
+#report {
+    padding-top: 20%
+}

@@ -1,0 +1,65 @@
+<p>J-Lek Dorm</p>
+<input type="file" import-sheet-js="" multiple="false" (change)="SheetJSImportDirective($event)"/>
+<button type="submit" (click) ="captureScreen()" *ngIf="isAllowPDFGen">PDF ไฟล์</button>
+<button type="submit" (click) ="downloadFile()" *ngIf="isAllowPDFDownload">PDF ดาว์โหลด</button>
+<div id="allPage">
+    <div *ngFor="let page of pages" class="section" >
+        <div class="section" [id]="page.pageNumber">
+            <div >
+                <div class="row">
+                    <div *ngFor="let receipt of page.receipts" id="border">
+                        <div class="col-md-6 col-sm-6 col-xs-6"  id="top">
+                            <h2>ใบรับเงิน           (J-Lek)</h2>
+                            <div id="secondline">
+                                <div id="left">สำหรับเดือน - {{page.month}}</div>
+                                <div id="right">ห้องเลขที่ - {{receipt.roomNumber}}</div>
+                            </div>
+                            <div id="body">
+                                <div  *ngFor="let data of receipt.data" >
+                                    <div id="bodyContent" *ngIf="data.key != 'ห้องเลขที่';">
+                                        <div id="left" >{{data.key}}</div>
+                                        <div id="value">{{data.value}}</div>
+                                        <div id="right">บาท</div>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div id="footerContent">
+                                <div id="PS"> ** หมายเหตุ: รับชำระทุกๆวันที่ 1-5 ของเดือน ** </div>
+                                <div id= "lastline"> ผู้รับเงิน....................................วันที่..../..../......</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngFor="let report of page.reports" id="border">
+                        <div class="col-md-6 col-sm-6 col-xs-6"  id="report">
+                            <h2>ใบแจ้งหนี้             (J-Lek)</h2>
+                            <div id="secondline">
+                                <div id="left">สำหรับเดือน - {{page.month}}</div>
+                                <div id="right">ห้องเลขที่ - {{report.roomNumber}}</div>
+                            </div>
+                            <div id="body">
+                                <div *ngFor="let data of report.data">
+                                    <div  id="bodyContent" >
+                                        <div id="left">{{data.key}}</div>
+                                        <div id="value">{{data.value}}</div>
+                                        <div id="right">บาท</div> 
+                                    </div>
+                                    <div></div>           
+                                </div>
+                            </div>
+                            <div id="footerContent">
+                                <div id="PS"> 
+                                    <p>โอนเงินขื่อ นางสีวิกา แต่งศรี   ธ.กรุงเทพ (อ้อมใหญ่)</p>
+                                    <p>เลขบัญชี 239-039358-1</p>
+                                </div>
+                                <div id= "lastline"> ผู้แจ้ง....................................วันที่..../..../......</div>
+                                <div id="PS"> ** หมายเหตุ: รับชำระทุกๆวันที่ 1-5 ของเดือน ** </div>
+                            </div>
+                        </div>
+                    </div>                                          
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
