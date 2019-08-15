@@ -14,6 +14,7 @@ This project is created as workaround for gernerating the bills in pdf  after fi
 1. open the website https://kamolchanokta.github.io/JLekDorm/load-dorm2 
 2. upload file that fill all information. Please refer the sample file as Eng.xlsx
 3. Then click the button ***PDF ไฟล์*** to generate the pdf file.
-4. Wait for a while until the second button ***PDF ดาว์โหลด*** which allow to download
+4. Wait for a while until the second button ***PDF ดาว์โหลด*** appear. 
+5. Then, client is able to download the pdf
 
 
